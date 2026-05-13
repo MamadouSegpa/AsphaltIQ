@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { toast } from "sonner";
 import { Lock, ArrowRight } from "@phosphor-icons/react";
@@ -12,10 +12,12 @@ export default function AdminLogin() {
   const [password, setPassword] = useState("");
   const [submitting, setSubmitting] = useState(false);
 
-  // If already logged in, redirect
-  if (user && user.role === "admin") {
-    navigate("/admin", { replace: true });
-  }
+  // If already logged in, redirect (effect avoids setState-during-render warning)
+  useEffect(() => {
+    if (user && user.role === "admin") {
+      navigate("/admin", { replace: true });
+    }
+  }, [user, navigate]);
 
   const onSubmit = async (e) => {
     e.preventDefault();
