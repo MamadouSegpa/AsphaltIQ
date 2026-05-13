@@ -38,7 +38,7 @@ export default function AdminLogin() {
       <div className="w-full max-w-md">
         <Link to="/" className="flex flex-col items-center gap-3" data-testid="login-brand">
           <img
-            src="https://customer-assets.emergentagent.com/job_asphal-armour/artifacts/yoge8s6k_IMG_0079.jpeg"
+            src="/logo.png"
             alt="Asphalt Armour"
             className="h-20 w-20 object-contain"
           />

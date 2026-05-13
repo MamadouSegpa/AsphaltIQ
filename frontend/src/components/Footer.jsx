@@ -11,7 +11,7 @@ export default function Footer() {
         <div className="md:col-span-2">
           <div className="flex items-center gap-4">
             <img
-              src="https://customer-assets.emergentagent.com/job_asphal-armour/artifacts/yoge8s6k_IMG_0079.jpeg"
+              src="/logo.png"
               alt="Asphalt Armour"
               className="h-16 w-16 object-contain"
             />

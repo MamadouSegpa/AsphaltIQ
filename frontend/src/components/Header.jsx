@@ -27,7 +27,7 @@ export default function Header() {
           data-testid="brand-link"
         >
           <img
-            src="https://customer-assets.emergentagent.com/job_asphal-armour/artifacts/yoge8s6k_IMG_0079.jpeg"
+            src="/logo.png"
             alt="Asphalt Armour"
             className="h-11 w-11 object-contain"
           />

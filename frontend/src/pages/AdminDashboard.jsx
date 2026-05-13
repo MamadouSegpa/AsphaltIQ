@@ -94,7 +94,7 @@ export default function AdminDashboard() {
           <div className="flex items-center gap-8">
             <Link to="/" className="flex items-center gap-3" data-testid="admin-brand">
               <img
-                src="https://customer-assets.emergentagent.com/job_asphal-armour/artifacts/yoge8s6k_IMG_0079.jpeg"
+                src="/logo.png"
                 alt="Asphalt Armour"
                 className="h-9 w-9 object-contain"
               />
