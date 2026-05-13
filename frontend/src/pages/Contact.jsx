@@ -60,7 +60,7 @@ export default function Contact() {
               <div className="bg-zinc-950 p-6" data-testid="contact-info-area">
                 <MapPin size={22} weight="bold" className="text-yellow-400" />
                 <div className="overline mt-4">Service Area</div>
-                <div className="mt-2 text-sm text-white">Greater Metro Area</div>
+                <div className="mt-2 text-sm text-white">Montreal West Island</div>
               </div>
               <div className="bg-zinc-950 p-6" data-testid="contact-info-hours">
                 <Clock size={22} weight="bold" className="text-yellow-400" />
