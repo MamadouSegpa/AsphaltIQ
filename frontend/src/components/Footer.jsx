@@ -9,8 +9,15 @@ export default function Footer() {
     <footer className="bg-black border-t border-white/5 py-20 px-6 md:px-10" data-testid="site-footer">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
         <div className="md:col-span-2">
-          <div className="brand-wordmark text-4xl text-white">
-            ASPHALT <span className="text-yellow-400">ARMOUR</span>
+          <div className="flex items-center gap-4">
+            <img
+              src="https://customer-assets.emergentagent.com/job_asphal-armour/artifacts/yoge8s6k_IMG_0079.jpeg"
+              alt="Asphalt Armour"
+              className="h-16 w-16 object-contain"
+            />
+            <div className="brand-wordmark text-3xl text-white">
+              ASPHALT <span className="text-yellow-400">ARMOUR</span>
+            </div>
           </div>
           <p className="mt-6 text-zinc-400 max-w-md leading-relaxed text-sm">
             Industrial-grade driveway sealcoating and crack filling. Built to protect
@@ -45,8 +52,8 @@ export default function Footer() {
           <ul className="space-y-3 text-sm text-zinc-300">
             <li className="flex items-start gap-3">
               <Phone size={16} weight="bold" className="text-yellow-400 mt-1" />
-              <a href="tel:5551234567" className="hover:text-yellow-400" data-testid="footer-phone">
-                (555) 123-4567
+              <a href="tel:4384967111" className="hover:text-yellow-400" data-testid="footer-phone">
+                (438) 496-7111
               </a>
             </li>
             <li className="flex items-start gap-3">

@@ -36,8 +36,15 @@ export default function AdminLogin() {
   return (
     <div className="min-h-screen bg-black flex items-center justify-center px-6" data-testid="admin-login-page">
       <div className="w-full max-w-md">
-        <Link to="/" className="brand-wordmark text-3xl text-white block text-center" data-testid="login-brand">
-          ASPHALT <span className="text-yellow-400">ARMOUR</span>
+        <Link to="/" className="flex flex-col items-center gap-3" data-testid="login-brand">
+          <img
+            src="https://customer-assets.emergentagent.com/job_asphal-armour/artifacts/yoge8s6k_IMG_0079.jpeg"
+            alt="Asphalt Armour"
+            className="h-20 w-20 object-contain"
+          />
+          <span className="brand-wordmark text-2xl text-white">
+            ASPHALT <span className="text-yellow-400">ARMOUR</span>
+          </span>
         </Link>
         <div className="overline text-center mt-8">Admin Access</div>
         <h1 className="heading-display text-4xl text-white font-bold text-center mt-2">Sign in</h1>

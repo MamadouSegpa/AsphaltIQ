@@ -13,8 +13,8 @@ const CRACK_IMG =
 const FEATURES = [
   { icon: ShieldCheck, title: "Premium Sealants", body: "Commercial-grade coal-tar and asphalt emulsion. No big-box-store fillers." },
   { icon: Drop, title: "Weather-Proof", body: "Repels water, oil, gasoline, and UV damage. Extends pavement life 2-3×." },
-  { icon: Wrench, title: "Crew-Owned Work", body: "No subcontractors. Our own crew on every job — accountability included." },
-  { icon: Clock, title: "On-Time, Always", body: "Quoted timelines are kept. Driveways back in service within 24-48 hours." },
+  { icon: Wrench, title: "Satisfaction Guaranteed", body: "We don't leave until you're happy. If something isn't right, we make it right — full stop." },
+  { icon: Clock, title: "Built To Last", body: "A proper sealcoat lasts 3-5 years. Quality crack filling lasts even longer. Real protection, not a paint job." },
 ];
 
 export default function Home() {
@@ -36,7 +36,7 @@ export default function Home() {
         <div className="relative max-w-7xl mx-auto px-6 md:px-10 py-24 grid grid-cols-1 lg:grid-cols-12 gap-12 w-full">
           <div className="lg:col-span-8">
             <div className="overline fade-up" data-testid="hero-overline">
-              Asphalt protection · Est. 2014
+              Driveway Protection · Free Quotes
             </div>
             <h1
               className="brand-wordmark text-6xl sm:text-7xl md:text-8xl lg:text-[9rem] leading-[0.85] mt-6 text-white fade-up fade-up-delay-1"
@@ -64,16 +64,16 @@ export default function Home() {
 
           <div className="lg:col-span-4 flex lg:flex-col gap-6 lg:gap-0 lg:justify-end fade-up fade-up-delay-3">
             <div className="flex-1 border-l border-yellow-400/40 pl-5">
-              <div className="brand-wordmark text-5xl text-yellow-400">10+</div>
-              <div className="text-xs uppercase tracking-widest text-zinc-400 mt-1">Years of work</div>
+              <div className="brand-wordmark text-5xl text-yellow-400">3-5 yr</div>
+              <div className="text-xs uppercase tracking-widest text-zinc-400 mt-1">Sealcoat lifespan</div>
             </div>
             <div className="flex-1 border-l border-yellow-400/40 pl-5 lg:mt-6">
-              <div className="brand-wordmark text-5xl text-yellow-400">2.4k</div>
-              <div className="text-xs uppercase tracking-widest text-zinc-400 mt-1">Driveways sealed</div>
+              <div className="brand-wordmark text-5xl text-yellow-400">100%</div>
+              <div className="text-xs uppercase tracking-widest text-zinc-400 mt-1">Satisfaction guaranteed</div>
             </div>
             <div className="flex-1 border-l border-yellow-400/40 pl-5 lg:mt-6">
-              <div className="brand-wordmark text-5xl text-yellow-400">98%</div>
-              <div className="text-xs uppercase tracking-widest text-zinc-400 mt-1">Repeat clients</div>
+              <div className="brand-wordmark text-5xl text-yellow-400">FREE</div>
+              <div className="text-xs uppercase tracking-widest text-zinc-400 mt-1">Quotes always</div>
             </div>
           </div>
         </div>
@@ -165,8 +165,9 @@ export default function Home() {
               Hard work. <span className="text-yellow-400">Harder armour.</span>
             </h2>
             <p className="mt-6 text-zinc-400 text-lg leading-relaxed">
-              We don't cut corners. We don't subcontract. Every job is treated like
-              it's our own driveway — because reputation is the only marketing that lasts.
+              We don't cut corners. We use premium materials, take prep seriously,
+              and back every job with a 100% satisfaction guarantee. If you're not
+              happy, we make it right.
             </p>
           </div>
 

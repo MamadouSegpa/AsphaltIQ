@@ -41,8 +41,8 @@ export default function Contact() {
             <div className="border border-white/10 p-8 bg-zinc-950" data-testid="contact-info-phone">
               <Phone size={28} weight="bold" className="text-yellow-400" />
               <div className="overline mt-6">Phone</div>
-              <a href="tel:5551234567" className="block brand-wordmark text-4xl text-white mt-2 hover:text-yellow-400 transition-colors">
-                (555) 123-4567
+              <a href="tel:4384967111" className="block brand-wordmark text-4xl text-white mt-2 hover:text-yellow-400 transition-colors">
+                (438) 496-7111
               </a>
               <p className="text-sm text-zinc-500 mt-2">Mon–Sat · 7am – 7pm</p>
             </div>

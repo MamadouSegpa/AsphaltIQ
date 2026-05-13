@@ -74,14 +74,14 @@ export default function Services() {
             index="01"
             title="Driveway Sealcoating"
             image={SEAL_IMG}
-            blurb="Restore that deep, jet-black finish and lock out the weather. Our two-coat asphalt-emulsion sealcoat fortifies the surface against UV rays, water, gasoline, and freeze-thaw cycles — extending pavement life 2-3 times."
+            blurb="Restore that deep, jet-black finish and lock out the weather. Our premium asphalt-emulsion sealcoat fortifies the surface against UV rays, water, gasoline, and freeze-thaw cycles — extending pavement life 2-3 times. Backed by our 100% satisfaction guarantee."
             includes={[
               "Power-wash & debris removal",
-              "Edge cut-in by hand",
-              "Two spray-applied coats",
               "Oil-spot primer treatment",
+              "Premium asphalt-emulsion sealant",
               "Sand-traction additive (optional)",
-              "24–48 hr cure time",
+              "Lasts 3-5 years",
+              "100% satisfaction guaranteed",
             ]}
             ideal="Driveways every 2-3 years, commercial parking lots every 1-2 years."
           />
@@ -93,14 +93,14 @@ export default function Services() {
             title="Crack Filling"
             image={CRACK_IMG}
             reverse
-            blurb="Cracks are how water gets in. Water is how driveways die. We rout, clean, and inject hot-applied rubberized crack sealant that flexes with the pavement through temperature swings — stopping small cracks before they become expensive replacements."
+            blurb="Cracks are how water gets in. Water is how driveways die. We rout, clean, and fill cracks with premium flexible sealant that moves with the pavement through temperature swings — stopping small cracks before they become expensive replacements. Backed by our satisfaction guarantee."
             includes={[
               "Crack routing & cleaning",
-              "Hot-applied rubberized sealant",
+              "Premium flexible sealant",
               "Squeegee finish for clean lines",
               "Pre-sealcoat preparation",
               "Up to 1\" wide cracks",
-              "Same-day cure",
+              "Long-lasting protection",
             ]}
             ideal="Any driveway with visible cracking — always done before sealcoating."
           />
