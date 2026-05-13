@@ -11,10 +11,12 @@ import bcrypt
 import jwt
 from datetime import datetime, timezone, timedelta
 from typing import Optional, List
-from fastapi import FastAPI, APIRouter, HTTPException, Request, Response, Depends
+from fastapi import FastAPI, APIRouter, HTTPException, Request, Response, Depends, BackgroundTasks
 from starlette.middleware.cors import CORSMiddleware
 from motor.motor_asyncio import AsyncIOMotorClient
 from pydantic import BaseModel, Field, EmailStr, ConfigDict
+
+from emailer import send_quote_notification, send_contact_notification
 
 
 # ---------- DB ----------
@@ -173,7 +175,7 @@ async def me(current_user: dict = Depends(get_current_user)):
 
 # ---------- Quotes ----------
 @api_router.post("/quotes", response_model=QuoteOut, status_code=201)
-async def create_quote(payload: QuoteCreate):
+async def create_quote(payload: QuoteCreate, background_tasks: BackgroundTasks):
     doc = {
         "id": str(uuid.uuid4()),
         **payload.model_dump(),
@@ -182,6 +184,7 @@ async def create_quote(payload: QuoteCreate):
     }
     await db.quotes.insert_one(doc)
     doc.pop("_id", None)
+    background_tasks.add_task(send_quote_notification, doc)
     return QuoteOut(**doc)
 
 
@@ -208,7 +211,7 @@ async def update_quote_status(quote_id: str, payload: QuoteStatusUpdate, current
 
 # ---------- Contact ----------
 @api_router.post("/contact", response_model=ContactOut, status_code=201)
-async def create_contact(payload: ContactCreate):
+async def create_contact(payload: ContactCreate, background_tasks: BackgroundTasks):
     doc = {
         "id": str(uuid.uuid4()),
         **payload.model_dump(),
@@ -217,6 +220,7 @@ async def create_contact(payload: ContactCreate):
     }
     await db.contacts.insert_one(doc)
     doc.pop("_id", None)
+    background_tasks.add_task(send_contact_notification, doc)
     return ContactOut(**doc)
 
 
