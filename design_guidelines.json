@@ -1,0 +1,102 @@
+{
+  "theme": "dark",
+  "archetype": "Swiss & High-Contrast",
+  "colors": {
+    "background": "#0a0a0a",
+    "surface": "#121212",
+    "surface_alt": "#1a1a1a",
+    "primary": "#facc15",
+    "primary_hover": "#eab308",
+    "text_primary": "#ffffff",
+    "text_secondary": "#a1a1aa",
+    "border": "rgba(255,255,255,0.1)",
+    "success": "#22c55e",
+    "warning": "#f59e0b",
+    "danger": "#ef4444"
+  },
+  "typography": {
+    "heading_font": "Cabinet Grotesk, sans-serif",
+    "body_font": "IBM Plex Sans, sans-serif",
+    "brand_font": "Anton, sans-serif",
+    "h1": "text-5xl sm:text-6xl+ tracking-tighter font-black",
+    "h2": "text-4xl sm:text-5xl tracking-tight font-bold",
+    "h3": "text-2xl sm:text-3xl tracking-tight font-semibold",
+    "h4": "text-xl font-medium",
+    "body": "text-base leading-relaxed text-zinc-400",
+    "overline": "text-xs tracking-[0.2em] uppercase font-bold text-yellow-400"
+  },
+  "spacing_and_layout": {
+    "grid_strategy": "MODE A: TETRIS GRID for Marketing, MODE B: CONTROL ROOM for Admin",
+    "section_padding": "py-24 sm:py-32",
+    "container_padding": "px-6 md:px-12",
+    "gap": "gap-8 md:gap-12",
+    "card_padding": "p-8",
+    "border_radius": "rounded-none" 
+  },
+  "components": {
+    "button": "bg-yellow-400 text-black font-bold uppercase tracking-widest hover:bg-yellow-500 rounded-none px-8 py-4 transition-all focus:ring-2 focus:ring-yellow-400 focus:ring-offset-2 focus:ring-offset-black",
+    "input": "bg-zinc-900 border border-zinc-800 text-white focus:border-yellow-400 focus:ring-1 focus:ring-yellow-400 rounded-none p-4",
+    "card": "bg-zinc-900/50 border border-white/5 p-8 hover:border-yellow-400/50 transition-colors duration-300",
+    "header": "fixed top-0 w-full z-50 bg-black/60 backdrop-blur-xl border-b border-white/5",
+    "footer": "bg-black py-24 border-t border-white/5",
+    "admin_table": "w-full text-left text-sm text-zinc-300",
+    "admin_th": "px-4 py-3 font-medium text-white border-b border-white/10 bg-zinc-900/50",
+    "admin_td": "px-4 py-4 border-b border-white/5"
+  },
+  "motion": {
+    "page_transition": "fade-in with slight scale-up",
+    "hover_state": "scale-105 for images, border color shift for cards",
+    "marquee": "slow continuous scroll for 'ASPHALT ARMOUR - DRIVEWAY SEALCOATING - CRACK FILLING'"
+  },
+  "media": {
+    "image_urls": {
+      "hero_bg": {
+        "url": "https://images.unsplash.com/photo-1581037417787-dda6c19e06ad?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njd8MHwxfHNlYXJjaHwxfHxmcmVzaGx5JTIwc2VhbGVkJTIwYXNwaGFsdCUyMGRyaXZld2F5fGVufDB8fHx8MTc3ODY5NTY1OXww&ixlib=rb-4.1.0&q=85",
+        "description": "Dark asphalt road texture",
+        "location": "Home Page Hero Section Background (with bg-black/70 overlay)"
+      },
+      "service_crack_filling": {
+        "url": "https://images.unsplash.com/photo-1773118330236-d812832b5b71?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzN8MHwxfHNlYXJjaHwxfHxhc3BoYWx0JTIwY3JhY2slMjBmaWxsaW5nJTIwcmVwYWlyfGVufDB8fHx8MTc3ODY5NTY1OHww&ixlib=rb-4.1.0&q=85",
+        "description": "Workers applying hot asphalt",
+        "location": "Services Page - Crack Filling Section"
+      },
+      "service_sealcoating": {
+        "url": "https://images.unsplash.com/photo-1774296690468-4bfb6aec8c95?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njd8MHwxfHNlYXJjaHwyfHxmcmVzaGx5JTIwc2VhbGVkJTIwYXNwaGFsdCUyMGRyaXZld2F5fGVufDB8fHx8MTc3ODY5NTY1OXww&ixlib=rb-4.1.0&q=85",
+        "description": "Paved road through forest",
+        "location": "Services Page - Sealcoating Section"
+      }
+    }
+  },
+  "pages": {
+    "home": {
+      "layout": "Hero Section > Marquee Banner > Bento Grid Services Preview > Why Choose Us > CTA",
+      "special_instructions": "Hero section must have a heavy overlay (bg-black/70) to ensure text contrast. Use 'Anton' font for the massive 'ASPHALT ARMOUR' wordmark in the hero. Include a fast marquee with yellow background and black text below the hero."
+    },
+    "services": {
+      "layout": "Header > Split-screen sections (Text left, Image right) > Pricing/Benefits > CTA",
+      "special_instructions": "Use sharp, square images. No border-radius. High contrast typographic hierarchy."
+    },
+    "quote_form": {
+      "layout": "Centered form container within a grid layout",
+      "special_instructions": "Use Shadcn forms with custom styling (dark backgrounds, yellow focus rings). Make it feel like an industrial application form."
+    },
+    "contact": {
+      "layout": "2-column grid: Left info (Phone, Email, Area), Right (Contact Form)",
+      "special_instructions": "Include large typography for phone numbers. Use subtle 1px borders."
+    },
+    "admin": {
+      "layout": "Sidebar Navigation + Main Data Table View",
+      "special_instructions": "Use 'Control Room' grid. Tight spacing. High data density. Shadcn Tables for quote submissions. Status badges (e.g., 'New', 'Contacted') should use neon accents."
+    }
+  },
+  "instructions_to_main_agent": [
+    "Strictly follow the Dark Theme. Do not use white backgrounds for main containers.",
+    "BORDERS & CORNERS: Use crisp, sharp edges (`rounded-none`). This is an industrial contractor site, not a friendly SaaS app. Hard lines communicate strength and 'armour'.",
+    "TYPOGRAPHY: Import Cabinet Grotesk (headings), IBM Plex Sans (body), and Anton (logo wordmark) from Google Fonts/Fontshare or implement directly.",
+    "CONTRAST: All text must meet APCA contrast ratios. If text overlays an image, use text-shadow or a dark gradient behind the text.",
+    "COMPONENTS: Use pure HTML/Tailwind for the marketing pages to achieve the Bento grids and overlapping elements. Use Shadcn exclusively for the Admin Dashboard and Forms.",
+    "ICONS: Use @phosphor-icons/react with 'bold' or 'duotone' weight for industrial feel. Run `yarn add @phosphor-icons/react`.",
+    "DATA ATTRIBUTES: Add `data-testid` to all interactive elements.",
+    "FILE EXTENSIONS: Ensure you are providing guidelines and generating code for .js/.jsx files (not .tsx)."
+  ]
+}
