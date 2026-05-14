@@ -116,7 +116,11 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <article className="group relative overflow-hidden border border-white/5 bg-zinc-900/50 hover:border-yellow-400/60 transition-colors duration-300" data-testid="preview-card-sealcoating">
+            <Link
+              to="/services"
+              className="group relative overflow-hidden border border-white/5 bg-zinc-900/50 hover:border-yellow-400/60 transition-colors duration-300 cursor-pointer block"
+              data-testid="preview-card-sealcoating"
+            >
               <div className="aspect-[4/3] overflow-hidden">
                 <img
                   src={SEAL_IMG}
@@ -126,15 +130,22 @@ export default function Home() {
               </div>
               <div className="p-8">
                 <div className="overline">01 — Service</div>
-                <h3 className="brand-wordmark text-4xl mt-3 text-white">Driveway Sealcoating</h3>
+                <h3 className="brand-wordmark text-4xl mt-3 text-white group-hover:text-yellow-400 transition-colors">Driveway Sealcoating</h3>
                 <p className="mt-4 text-zinc-400 leading-relaxed">
                   Premium asphalt emulsion sealcoat that locks out moisture, blocks UV,
                   and restores that fresh-paved jet-black finish.
                 </p>
+                <div className="mt-6 inline-flex items-center gap-2 text-xs font-semibold tracking-[0.18em] uppercase text-yellow-400 opacity-0 group-hover:opacity-100 transition-opacity">
+                  Learn More <ArrowRight size={14} weight="bold" />
+                </div>
               </div>
-            </article>
+            </Link>
 
-            <article className="group relative overflow-hidden border border-white/5 bg-zinc-900/50 hover:border-yellow-400/60 transition-colors duration-300" data-testid="preview-card-crackfilling">
+            <Link
+              to="/services"
+              className="group relative overflow-hidden border border-white/5 bg-zinc-900/50 hover:border-yellow-400/60 transition-colors duration-300 cursor-pointer block"
+              data-testid="preview-card-crackfilling"
+            >
               <div className="aspect-[4/3] overflow-hidden">
                 <img
                   src={CRACK_IMG}
@@ -144,13 +155,16 @@ export default function Home() {
               </div>
               <div className="p-8">
                 <div className="overline">02 — Service</div>
-                <h3 className="brand-wordmark text-4xl mt-3 text-white">Crack Filling</h3>
+                <h3 className="brand-wordmark text-4xl mt-3 text-white group-hover:text-yellow-400 transition-colors">Crack Filling</h3>
                 <p className="mt-4 text-zinc-400 leading-relaxed">
-                  Hot-applied rubberized crack sealant that flexes with the pavement,
+                  Premium flexible crack sealant that moves with the pavement,
                   stopping small cracks before they become expensive failures.
                 </p>
+                <div className="mt-6 inline-flex items-center gap-2 text-xs font-semibold tracking-[0.18em] uppercase text-yellow-400 opacity-0 group-hover:opacity-100 transition-opacity">
+                  Learn More <ArrowRight size={14} weight="bold" />
+                </div>
               </div>
-            </article>
+            </Link>
           </div>
         </div>
       </section>
