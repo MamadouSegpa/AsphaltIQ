@@ -9,6 +9,7 @@ html, body, #root {
   color: #18181b;
   margin: 0;
   padding: 0;
+  transition: background-color 0.25s ease, color 0.25s ease;
 }
 
 body {
@@ -18,10 +19,7 @@ body {
   background-color: #f5f5f4;
 }
 
-::selection {
-  background: #facc15;
-  color: #000;
-}
+::selection { background: #facc15; color: #000; }
 
 ::-webkit-scrollbar { width: 10px; height: 10px; }
 ::-webkit-scrollbar-track { background: #e7e5e4; }
@@ -58,38 +56,17 @@ body {
   body { @apply bg-background text-foreground; }
 }
 
-.brand-wordmark {
-  font-family: 'Anton', sans-serif;
-  letter-spacing: 0.02em;
-}
-
-.heading-display {
-  font-family: 'Space Grotesk', sans-serif;
-  letter-spacing: -0.02em;
-}
-
+.brand-wordmark { font-family: 'Anton', sans-serif; letter-spacing: 0.02em; }
+.heading-display { font-family: 'Space Grotesk', sans-serif; letter-spacing: -0.02em; }
 .overline {
-  font-size: 0.75rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: #b45309;
+  font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase;
+  font-weight: 700; color: #b45309;
 }
 
-@keyframes marquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-.marquee-track {
-  display: flex;
-  width: max-content;
-  animation: marquee 28s linear infinite;
-}
+@keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+.marquee-track { display: flex; width: max-content; animation: marquee 28s linear infinite; }
 
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
+@keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 .fade-up { animation: fadeUp 0.8s ease-out forwards; }
 .fade-up-delay-1 { animation-delay: 0.1s; opacity: 0; }
 .fade-up-delay-2 { animation-delay: 0.25s; opacity: 0; }
@@ -97,83 +74,95 @@ body {
 
 .stripes-bg {
   background-image: repeating-linear-gradient(
-    45deg,
-    transparent,
-    transparent 12px,
-    rgba(0, 0, 0, 0.04) 12px,
-    rgba(0, 0, 0, 0.04) 24px
+    45deg, transparent, transparent 12px,
+    rgba(0, 0, 0, 0.04) 12px, rgba(0, 0, 0, 0.04) 24px
   );
 }
-
 .grain::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
+  content: ''; position: absolute; inset: 0; pointer-events: none;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
-  opacity: 0.08;
-  mix-blend-mode: overlay;
+  opacity: 0.08; mix-blend-mode: overlay;
 }
 
 .btn-primary {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  background: #facc15;
-  color: #000;
-  font-family: 'IBM Plex Sans', sans-serif;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  font-size: 0.875rem;
-  padding: 1rem 2rem;
-  transition: background 0.2s ease, transform 0.2s ease;
-  border: none;
-  cursor: pointer;
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  background: #facc15; color: #000;
+  font-family: 'IBM Plex Sans', sans-serif; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.875rem;
+  padding: 1rem 2rem; transition: background 0.2s ease, transform 0.2s ease;
+  border: none; cursor: pointer;
 }
 .btn-primary:hover { background: #eab308; transform: translateY(-1px); }
 .btn-primary:focus { outline: 2px solid #facc15; outline-offset: 2px; }
 
 .btn-ghost {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  background: transparent;
-  color: #18181b;
-  font-family: 'IBM Plex Sans', sans-serif;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  font-size: 0.875rem;
-  padding: 1rem 2rem;
-  border: 1px solid rgba(0,0,0,0.2);
-  transition: border-color 0.2s ease, background 0.2s ease;
-  cursor: pointer;
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  background: transparent; color: #18181b;
+  font-family: 'IBM Plex Sans', sans-serif; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.875rem;
+  padding: 1rem 2rem; border: 1px solid rgba(0,0,0,0.2);
+  transition: border-color 0.2s ease, background 0.2s ease; cursor: pointer;
 }
 .btn-ghost:hover { border-color: #facc15; background: rgba(250,204,21,0.1); }
 
 .field-input {
-  width: 100%;
-  background: #ffffff;
-  border: 1px solid #d4d4d8;
-  color: #18181b;
-  padding: 0.875rem 1rem;
-  font-family: 'IBM Plex Sans', sans-serif;
-  font-size: 0.95rem;
+  width: 100%; background: #ffffff; border: 1px solid #d4d4d8;
+  color: #18181b; padding: 0.875rem 1rem;
+  font-family: 'IBM Plex Sans', sans-serif; font-size: 0.95rem;
   transition: border-color 0.15s ease;
 }
-.field-input:focus {
-  outline: none;
-  border-color: #facc15;
-  box-shadow: 0 0 0 1px #facc15;
-}
+.field-input:focus { outline: none; border-color: #facc15; box-shadow: 0 0 0 1px #facc15; }
 .field-input::placeholder { color: #a1a1aa; }
 .field-label {
-  display: block;
-  font-size: 0.7rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: #52525b;
+  display: block; font-size: 0.7rem; letter-spacing: 0.18em;
+  text-transform: uppercase; font-weight: 700; color: #52525b;
   margin-bottom: 0.5rem;
 }
+
+/* =========================================================
+   DARK MODE OVERRIDES — toggles when <html class="dark">
+   ========================================================= */
+html.dark { color-scheme: dark; }
+html.dark, html.dark body, html.dark #root { background-color: #0a0a0a; color: #ffffff; }
+html.dark ::-webkit-scrollbar-track { background: #0a0a0a; }
+html.dark ::-webkit-scrollbar-thumb { background: #27272a; }
+html.dark .overline { color: #facc15; }
+html.dark .btn-ghost { color: #fff; border-color: rgba(255,255,255,0.2); }
+html.dark .btn-ghost:hover { background: rgba(250,204,21,0.05); }
+html.dark .field-input { background: #0f0f0f; border-color: #27272a; color: #fff; }
+html.dark .field-input::placeholder { color: #52525b; }
+html.dark .field-label { color: #a1a1aa; }
+html.dark .stripes-bg {
+  background-image: repeating-linear-gradient(
+    45deg, transparent, transparent 12px,
+    rgba(250, 204, 21, 0.04) 12px, rgba(250, 204, 21, 0.04) 24px
+  );
+}
+
+/* Light-theme utility classes → flipped in dark mode */
+html.dark .bg-white { background-color: #18181b !important; }
+html.dark .bg-stone-50 { background-color: #131313 !important; }
+html.dark .bg-stone-100 { background-color: #0a0a0a !important; }
+html.dark .bg-zinc-100 { background-color: #18181b !important; }
+html.dark .hover\:bg-stone-50:hover { background-color: #131313 !important; }
+html.dark .text-zinc-900 { color: #ffffff !important; }
+html.dark .text-zinc-700 { color: #d4d4d8 !important; }
+html.dark .text-zinc-600 { color: #a1a1aa !important; }
+html.dark .text-zinc-500 { color: #71717a !important; }
+html.dark .text-amber-600 { color: #facc15 !important; }
+html.dark .hover\:text-amber-600:hover { color: #facc15 !important; }
+html.dark .group-hover\:text-amber-600:hover,
+html.dark .group:hover .group-hover\:text-amber-600 { color: #facc15 !important; }
+html.dark .border-zinc-200 { border-color: rgba(255,255,255,0.08) !important; }
+html.dark .border-zinc-300 { border-color: rgba(255,255,255,0.12) !important; }
+html.dark .border-zinc-400 { border-color: rgba(255,255,255,0.18) !important; }
+html.dark .border-amber-500 { border-color: rgba(250,204,21,0.4) !important; }
+html.dark .hover\:border-amber-500:hover { border-color: rgba(250,204,21,0.6) !important; }
+html.dark .invert { filter: none !important; }
+
+/* Header/footer translucent backgrounds get dark equivalent */
+html.dark .bg-white\/80 { background-color: rgba(10,10,10,0.7) !important; }
+
+/* Dark-themed bottom CTA inverted button (yellow band): white text in dark mode */
+html.dark .bg-zinc-900 { background-color: #000 !important; }
+html.dark .hover\:bg-black:hover { background-color: #18181b !important; }

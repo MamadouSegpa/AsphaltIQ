@@ -95,11 +95,11 @@ export default function AdminDashboard() {
             <Link to="/" className="flex items-center gap-3" data-testid="admin-brand">
               <img
                 src="/logo.png"
-                alt="Asphalt Armour"
+                alt="Asphaltiq"
                 className="h-9 w-9 object-contain"
               />
               <span className="brand-wordmark text-xl text-white hidden sm:inline">
-                ASPHALT <span className="text-yellow-400">ARMOUR</span>
+                ASPHALT<span className="text-yellow-400">IQ</span>
               </span>
             </Link>
             <span className="hidden sm:inline text-xs tracking-[0.2em] uppercase text-zinc-500">

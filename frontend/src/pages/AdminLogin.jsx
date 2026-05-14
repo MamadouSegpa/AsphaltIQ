@@ -39,11 +39,11 @@ export default function AdminLogin() {
         <Link to="/" className="flex flex-col items-center gap-3" data-testid="login-brand">
           <img
             src="/logo.png"
-            alt="Asphalt Armour"
+            alt="Asphaltiq"
             className="h-20 w-20 object-contain"
           />
           <span className="brand-wordmark text-2xl text-white">
-            ASPHALT <span className="text-yellow-400">ARMOUR</span>
+            ASPHALT<span className="text-yellow-400">IQ</span>
           </span>
         </Link>
         <div className="overline text-center mt-8">Admin Access</div>
