@@ -24,13 +24,11 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-6 md:px-10 h-16 flex items-center justify-between">
         <Link
           to="/"
-          className="flex items-center gap-3 text-zinc-900 hover:opacity-80 transition-opacity"
+          className="flex items-center text-zinc-900 hover:opacity-80 transition-opacity"
           data-testid="brand-link"
         >
-          <img src="/logo.png" alt="Asphaltiq" className="h-11 w-11 object-contain invert" />
-          <span className="brand-wordmark text-xl tracking-wider hidden sm:inline">
-            ASPHALT<span className="text-amber-600">IQ</span>
-          </span>
+          <img src="/wordmark-dark.png" alt="Asphaltiq" className="h-9 sm:h-10 w-auto object-contain block dark:hidden" />
+          <img src="/wordmark.png" alt="Asphaltiq" className="h-9 sm:h-10 w-auto object-contain hidden dark:block" />
         </Link>
 
         <nav className="hidden md:flex items-center gap-8" data-testid="desktop-nav">

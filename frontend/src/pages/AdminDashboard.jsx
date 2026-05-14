@@ -92,15 +92,8 @@ export default function AdminDashboard() {
       <header className="border-b border-white/10 bg-zinc-950">
         <div className="max-w-7xl mx-auto px-6 md:px-10 h-16 flex items-center justify-between">
           <div className="flex items-center gap-8">
-            <Link to="/" className="flex items-center gap-3" data-testid="admin-brand">
-              <img
-                src="/logo.png"
-                alt="Asphaltiq"
-                className="h-9 w-9 object-contain"
-              />
-              <span className="brand-wordmark text-xl text-white hidden sm:inline">
-                ASPHALT<span className="text-yellow-400">IQ</span>
-              </span>
+            <Link to="/" className="flex items-center" data-testid="admin-brand">
+              <img src="/wordmark.png" alt="Asphaltiq" className="h-8 w-auto object-contain" />
             </Link>
             <span className="hidden sm:inline text-xs tracking-[0.2em] uppercase text-zinc-500">
               Admin Console

@@ -18,12 +18,8 @@ export default function Footer() {
     <footer className="bg-stone-100 border-t border-zinc-200 py-20 px-6 md:px-10" data-testid="site-footer">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
         <div className="md:col-span-2">
-          <div className="flex items-center gap-4">
-            <img src="/logo.png" alt="Asphaltiq" className="h-16 w-16 object-contain invert" />
-            <div className="brand-wordmark text-3xl text-zinc-900">
-              ASPHALT<span className="text-amber-600">IQ</span>
-            </div>
-          </div>
+          <img src="/wordmark-dark.png" alt="Asphaltiq" className="h-12 sm:h-14 w-auto object-contain block dark:hidden" />
+          <img src="/wordmark.png" alt="Asphaltiq" className="h-12 sm:h-14 w-auto object-contain hidden dark:block" />
           <p className="mt-6 text-zinc-600 max-w-md leading-relaxed text-sm">
             {t(
               "Smarter driveway sealcoating and crack filling. Built to protect your asphalt investment for years to come.",

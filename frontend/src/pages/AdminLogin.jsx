@@ -36,15 +36,8 @@ export default function AdminLogin() {
   return (
     <div className="min-h-screen bg-black flex items-center justify-center px-6" data-testid="admin-login-page">
       <div className="w-full max-w-md">
-        <Link to="/" className="flex flex-col items-center gap-3" data-testid="login-brand">
-          <img
-            src="/logo.png"
-            alt="Asphaltiq"
-            className="h-20 w-20 object-contain"
-          />
-          <span className="brand-wordmark text-2xl text-white">
-            ASPHALT<span className="text-yellow-400">IQ</span>
-          </span>
+        <Link to="/" className="flex justify-center" data-testid="login-brand">
+          <img src="/wordmark.png" alt="Asphaltiq" className="h-14 w-auto object-contain" />
         </Link>
         <div className="overline text-center mt-8">Admin Access</div>
         <h1 className="heading-display text-4xl text-white font-bold text-center mt-2">Sign in</h1>
