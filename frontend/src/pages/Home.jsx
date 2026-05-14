@@ -43,10 +43,10 @@ export default function Home() {
               data-testid="hero-title"
             >
               ARMOUR<br />
-              YOUR <span className="text-yellow-400">DRIVE</span>.
+              YOUR <span className="text-amber-600">DRIVE</span>.
             </h1>
             <p
-              className="mt-8 text-lg sm:text-xl text-zinc-300 max-w-xl leading-relaxed fade-up fade-up-delay-2"
+              className="mt-8 text-lg sm:text-xl text-zinc-700 max-w-xl leading-relaxed fade-up fade-up-delay-2"
               data-testid="hero-subtitle"
             >
               Industrial sealcoating and crack filling that protects asphalt from
@@ -63,17 +63,17 @@ export default function Home() {
           </div>
 
           <div className="lg:col-span-4 flex lg:flex-col gap-6 lg:gap-0 lg:justify-end fade-up fade-up-delay-3">
-            <div className="flex-1 border-l border-yellow-400/40 pl-5">
-              <div className="brand-wordmark text-5xl text-yellow-400">3-5 yr</div>
-              <div className="text-xs uppercase tracking-widest text-zinc-400 mt-1">Sealcoat lifespan</div>
+            <div className="flex-1 border-l border-amber-500 pl-5">
+              <div className="brand-wordmark text-5xl text-amber-600">3-5 yr</div>
+              <div className="text-xs uppercase tracking-widest text-zinc-600 mt-1">Sealcoat lifespan</div>
             </div>
-            <div className="flex-1 border-l border-yellow-400/40 pl-5 lg:mt-6">
-              <div className="brand-wordmark text-5xl text-yellow-400">100%</div>
-              <div className="text-xs uppercase tracking-widest text-zinc-400 mt-1">Satisfaction guaranteed</div>
+            <div className="flex-1 border-l border-amber-500 pl-5 lg:mt-6">
+              <div className="brand-wordmark text-5xl text-amber-600">100%</div>
+              <div className="text-xs uppercase tracking-widest text-zinc-600 mt-1">Satisfaction guaranteed</div>
             </div>
-            <div className="flex-1 border-l border-yellow-400/40 pl-5 lg:mt-6">
-              <div className="brand-wordmark text-5xl text-yellow-400">FREE</div>
-              <div className="text-xs uppercase tracking-widest text-zinc-400 mt-1">Quotes always</div>
+            <div className="flex-1 border-l border-amber-500 pl-5 lg:mt-6">
+              <div className="brand-wordmark text-5xl text-amber-600">FREE</div>
+              <div className="text-xs uppercase tracking-widest text-zinc-600 mt-1">Quotes always</div>
             </div>
           </div>
         </div>
@@ -101,16 +101,16 @@ export default function Home() {
       </section>
 
       {/* SERVICES PREVIEW */}
-      <section className="bg-zinc-950 py-24 sm:py-32 px-6 md:px-10" data-testid="services-preview">
+      <section className="bg-stone-100 py-24 sm:py-32 px-6 md:px-10" data-testid="services-preview">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
             <div>
               <div className="overline">What we do</div>
-              <h2 className="heading-display text-4xl sm:text-5xl md:text-6xl mt-4 font-bold text-white max-w-2xl">
-                Two services. Done <span className="text-yellow-400">exceptionally</span>.
+              <h2 className="heading-display text-4xl sm:text-5xl md:text-6xl mt-4 font-bold text-zinc-900 max-w-2xl">
+                Two services. Done <span className="text-amber-600">exceptionally</span>.
               </h2>
             </div>
-            <Link to="/services" className="text-sm font-semibold tracking-[0.18em] uppercase text-yellow-400 hover:text-white inline-flex items-center gap-2" data-testid="see-all-services">
+            <Link to="/services" className="text-sm font-semibold tracking-[0.18em] uppercase text-amber-600 hover:text-zinc-900 inline-flex items-center gap-2" data-testid="see-all-services">
               All Services <ArrowRight size={16} weight="bold" />
             </Link>
           </div>
@@ -118,7 +118,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <Link
               to="/services"
-              className="group relative overflow-hidden border border-white/5 bg-zinc-900/50 hover:border-yellow-400/60 transition-colors duration-300 cursor-pointer block"
+              className="group relative overflow-hidden border border-zinc-200 bg-white hover:border-amber-500 transition-colors duration-300 cursor-pointer block"
               data-testid="preview-card-sealcoating"
             >
               <div className="aspect-[4/3] overflow-hidden">
@@ -130,12 +130,12 @@ export default function Home() {
               </div>
               <div className="p-8">
                 <div className="overline">01 — Service</div>
-                <h3 className="brand-wordmark text-4xl mt-3 text-white group-hover:text-yellow-400 transition-colors">Driveway Sealcoating</h3>
-                <p className="mt-4 text-zinc-400 leading-relaxed">
+                <h3 className="brand-wordmark text-4xl mt-3 text-zinc-900 group-hover:text-amber-600 transition-colors">Driveway Sealcoating</h3>
+                <p className="mt-4 text-zinc-600 leading-relaxed">
                   Premium asphalt emulsion sealcoat that locks out moisture, blocks UV,
                   and restores that fresh-paved jet-black finish.
                 </p>
-                <div className="mt-6 inline-flex items-center gap-2 text-xs font-semibold tracking-[0.18em] uppercase text-yellow-400 opacity-0 group-hover:opacity-100 transition-opacity">
+                <div className="mt-6 inline-flex items-center gap-2 text-xs font-semibold tracking-[0.18em] uppercase text-amber-600 opacity-0 group-hover:opacity-100 transition-opacity">
                   Learn More <ArrowRight size={14} weight="bold" />
                 </div>
               </div>
@@ -143,7 +143,7 @@ export default function Home() {
 
             <Link
               to="/services"
-              className="group relative overflow-hidden border border-white/5 bg-zinc-900/50 hover:border-yellow-400/60 transition-colors duration-300 cursor-pointer block"
+              className="group relative overflow-hidden border border-zinc-200 bg-white hover:border-amber-500 transition-colors duration-300 cursor-pointer block"
               data-testid="preview-card-crackfilling"
             >
               <div className="aspect-[4/3] overflow-hidden">
@@ -155,12 +155,12 @@ export default function Home() {
               </div>
               <div className="p-8">
                 <div className="overline">02 — Service</div>
-                <h3 className="brand-wordmark text-4xl mt-3 text-white group-hover:text-yellow-400 transition-colors">Crack Filling</h3>
-                <p className="mt-4 text-zinc-400 leading-relaxed">
+                <h3 className="brand-wordmark text-4xl mt-3 text-zinc-900 group-hover:text-amber-600 transition-colors">Crack Filling</h3>
+                <p className="mt-4 text-zinc-600 leading-relaxed">
                   Premium flexible crack sealant that moves with the pavement,
                   stopping small cracks before they become expensive failures.
                 </p>
-                <div className="mt-6 inline-flex items-center gap-2 text-xs font-semibold tracking-[0.18em] uppercase text-yellow-400 opacity-0 group-hover:opacity-100 transition-opacity">
+                <div className="mt-6 inline-flex items-center gap-2 text-xs font-semibold tracking-[0.18em] uppercase text-amber-600 opacity-0 group-hover:opacity-100 transition-opacity">
                   Learn More <ArrowRight size={14} weight="bold" />
                 </div>
               </div>
@@ -170,29 +170,29 @@ export default function Home() {
       </section>
 
       {/* WHY CHOOSE US */}
-      <section className="bg-black py-24 sm:py-32 px-6 md:px-10 relative overflow-hidden" data-testid="why-section">
+      <section className="bg-stone-100 py-24 sm:py-32 px-6 md:px-10 relative overflow-hidden" data-testid="why-section">
         <div className="absolute inset-0 stripes-bg opacity-30 pointer-events-none" />
         <div className="relative max-w-7xl mx-auto">
           <div className="max-w-2xl">
             <div className="overline">Why Asphalt Armour</div>
-            <h2 className="heading-display text-4xl sm:text-5xl md:text-6xl mt-4 font-bold text-white">
-              Hard work. <span className="text-yellow-400">Harder armour.</span>
+            <h2 className="heading-display text-4xl sm:text-5xl md:text-6xl mt-4 font-bold text-zinc-900">
+              Hard work. <span className="text-amber-600">Harder armour.</span>
             </h2>
-            <p className="mt-6 text-zinc-400 text-lg leading-relaxed">
+            <p className="mt-6 text-zinc-600 text-lg leading-relaxed">
               We don't cut corners. We use premium materials, take prep seriously,
               and back every job with a 100% satisfaction guarantee. If you're not
               happy, we make it right.
             </p>
           </div>
 
-          <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-white/5">
+          <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-zinc-200">
             {FEATURES.map((f) => {
               const Icon = f.icon;
               return (
-                <div key={f.title} className="bg-black p-8 hover:bg-zinc-950 transition-colors" data-testid={`feature-${f.title.toLowerCase().replace(/\s+/g, "-")}`}>
-                  <Icon size={32} weight="bold" className="text-yellow-400" />
-                  <h3 className="mt-6 text-xl font-bold text-white">{f.title}</h3>
-                  <p className="mt-3 text-sm text-zinc-400 leading-relaxed">{f.body}</p>
+                <div key={f.title} className="bg-white p-8 hover:bg-stone-50 transition-colors" data-testid={`feature-${f.title.toLowerCase().replace(/\s+/g, "-")}`}>
+                  <Icon size={32} weight="bold" className="text-amber-600" />
+                  <h3 className="mt-6 text-xl font-bold text-zinc-900">{f.title}</h3>
+                  <p className="mt-3 text-sm text-zinc-600 leading-relaxed">{f.body}</p>
                 </div>
               );
             })}
@@ -208,7 +208,7 @@ export default function Home() {
           </h2>
           <Link
             to="/quote"
-            className="inline-flex items-center gap-3 bg-black text-yellow-400 font-bold uppercase tracking-[0.18em] text-sm px-10 py-5 hover:bg-zinc-900 transition-colors"
+            className="inline-flex items-center gap-3 bg-black text-amber-600 font-bold uppercase tracking-[0.18em] text-sm px-10 py-5 hover:bg-zinc-100 transition-colors"
             data-testid="bottom-cta-button"
           >
             Get Free Quote <ArrowRight size={18} weight="bold" />

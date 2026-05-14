@@ -17,22 +17,22 @@ export default function Header() {
 
   return (
     <header
-      className="fixed top-0 left-0 right-0 z-50 bg-black/70 backdrop-blur-xl border-b border-white/5"
+      className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-xl border-b border-zinc-200"
       data-testid="site-header"
     >
       <div className="max-w-7xl mx-auto px-6 md:px-10 h-16 flex items-center justify-between">
         <Link
           to="/"
-          className="flex items-center gap-3 text-white hover:opacity-90 transition-opacity"
+          className="flex items-center gap-3 text-zinc-900 hover:opacity-80 transition-opacity"
           data-testid="brand-link"
         >
           <img
             src="/logo.png"
             alt="Asphalt Armour"
-            className="h-11 w-11 object-contain"
+            className="h-11 w-11 object-contain invert"
           />
           <span className="brand-wordmark text-xl tracking-wider hidden sm:inline">
-            ASPHALT <span className="text-yellow-400">ARMOUR</span>
+            ASPHALT <span className="text-amber-600">ARMOUR</span>
           </span>
         </Link>
 
@@ -44,7 +44,7 @@ export default function Header() {
               data-testid={`nav-${item.label.toLowerCase().replace(/\s+/g, "-")}`}
               className={({ isActive }) =>
                 `text-xs font-semibold tracking-[0.18em] uppercase transition-colors ${
-                  isActive ? "text-yellow-400" : "text-zinc-300 hover:text-white"
+                  isActive ? "text-amber-600" : "text-zinc-700 hover:text-zinc-900"
                 }`
               }
             >
@@ -57,7 +57,7 @@ export default function Header() {
         </nav>
 
         <button
-          className="md:hidden text-white p-2"
+          className="md:hidden text-zinc-900 p-2"
           onClick={() => setOpen(!open)}
           aria-label="Toggle menu"
           data-testid="mobile-menu-toggle"
@@ -67,7 +67,7 @@ export default function Header() {
       </div>
 
       {open && (
-        <div className="md:hidden bg-black border-t border-white/5" data-testid="mobile-nav">
+        <div className="md:hidden bg-white border-t border-zinc-200" data-testid="mobile-nav">
           <div className="flex flex-col px-6 py-4 gap-4">
             {NAV.map((item) => (
               <NavLink
@@ -77,7 +77,7 @@ export default function Header() {
                 data-testid={`mobile-nav-${item.label.toLowerCase().replace(/\s+/g, "-")}`}
                 className={({ isActive }) =>
                   `text-sm font-semibold tracking-[0.18em] uppercase ${
-                    isActive ? "text-yellow-400" : "text-zinc-300"
+                    isActive ? "text-amber-600" : "text-zinc-700"
                   }`
                 }
               >

@@ -24,13 +24,13 @@ export default function Contact() {
   };
 
   return (
-    <div className="bg-black min-h-screen pt-32 pb-24 px-6 md:px-10" data-testid="contact-page">
+    <div className="bg-stone-100 min-h-screen pt-32 pb-24 px-6 md:px-10" data-testid="contact-page">
       <div className="max-w-7xl mx-auto">
         <div className="overline">Contact</div>
-        <h1 className="brand-wordmark text-5xl sm:text-6xl md:text-7xl mt-4 text-white leading-[0.9] max-w-4xl">
-          Let's talk <span className="text-yellow-400">pavement.</span>
+        <h1 className="brand-wordmark text-5xl sm:text-6xl md:text-7xl mt-4 text-zinc-900 leading-[0.9] max-w-4xl">
+          Let's talk <span className="text-amber-600">pavement.</span>
         </h1>
-        <p className="mt-6 text-zinc-400 text-lg max-w-2xl">
+        <p className="mt-6 text-zinc-600 text-lg max-w-2xl">
           Got a question, need a callback, or want to schedule an on-site look?
           Reach out — we usually reply same-day.
         </p>
@@ -38,34 +38,34 @@ export default function Contact() {
         <div className="mt-16 grid grid-cols-1 lg:grid-cols-12 gap-12">
           {/* INFO */}
           <div className="lg:col-span-5 space-y-8">
-            <div className="border border-white/10 p-8 bg-zinc-950" data-testid="contact-info-phone">
-              <Phone size={28} weight="bold" className="text-yellow-400" />
+            <div className="border border-zinc-200 p-8 bg-stone-100" data-testid="contact-info-phone">
+              <Phone size={28} weight="bold" className="text-amber-600" />
               <div className="overline mt-6">Phone</div>
-              <a href="tel:4384967111" className="block brand-wordmark text-4xl text-white mt-2 hover:text-yellow-400 transition-colors">
+              <a href="tel:4384967111" className="block brand-wordmark text-4xl text-zinc-900 mt-2 hover:text-amber-600 transition-colors">
                 (438) 496-7111
               </a>
               <p className="text-sm text-zinc-500 mt-2">Mon–Sat · 7am – 7pm</p>
             </div>
 
-            <div className="border border-white/10 p-8 bg-zinc-950" data-testid="contact-info-email">
-              <EnvelopeSimple size={28} weight="bold" className="text-yellow-400" />
+            <div className="border border-zinc-200 p-8 bg-stone-100" data-testid="contact-info-email">
+              <EnvelopeSimple size={28} weight="bold" className="text-amber-600" />
               <div className="overline mt-6">Email</div>
-              <a href="mailto:info@asphaltarmour.com" className="block text-2xl text-white mt-2 hover:text-yellow-400 transition-colors break-all">
+              <a href="mailto:info@asphaltarmour.com" className="block text-2xl text-zinc-900 mt-2 hover:text-amber-600 transition-colors break-all">
                 info@asphaltarmour.com
               </a>
               <p className="text-sm text-zinc-500 mt-2">Replies within 24 hours</p>
             </div>
 
             <div className="grid grid-cols-2 gap-px bg-white/10">
-              <div className="bg-zinc-950 p-6" data-testid="contact-info-area">
-                <MapPin size={22} weight="bold" className="text-yellow-400" />
+              <div className="bg-stone-100 p-6" data-testid="contact-info-area">
+                <MapPin size={22} weight="bold" className="text-amber-600" />
                 <div className="overline mt-4">Service Area</div>
-                <div className="mt-2 text-sm text-white">Montreal West Island</div>
+                <div className="mt-2 text-sm text-zinc-900">Montreal West Island</div>
               </div>
-              <div className="bg-zinc-950 p-6" data-testid="contact-info-hours">
-                <Clock size={22} weight="bold" className="text-yellow-400" />
+              <div className="bg-stone-100 p-6" data-testid="contact-info-hours">
+                <Clock size={22} weight="bold" className="text-amber-600" />
                 <div className="overline mt-4">Hours</div>
-                <div className="mt-2 text-sm text-white">Mon–Sat<br />7am – 7pm</div>
+                <div className="mt-2 text-sm text-zinc-900">Mon–Sat<br />7am – 7pm</div>
               </div>
             </div>
           </div>
@@ -74,7 +74,7 @@ export default function Contact() {
           <div className="lg:col-span-7">
             <form
               onSubmit={onSubmit}
-              className="bg-zinc-950 border border-white/10 p-8 sm:p-10 space-y-6"
+              className="bg-stone-100 border border-zinc-200 p-8 sm:p-10 space-y-6"
               data-testid="contact-form"
             >
               <div className="overline">Send a Message</div>

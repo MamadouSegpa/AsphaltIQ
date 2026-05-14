@@ -48,16 +48,16 @@ export default function Quote() {
 
   if (submitted) {
     return (
-      <div className="min-h-screen bg-black pt-32 pb-24 px-6 md:px-10 flex items-center" data-testid="quote-success">
+      <div className="min-h-screen bg-stone-100 pt-32 pb-24 px-6 md:px-10 flex items-center" data-testid="quote-success">
         <div className="max-w-2xl mx-auto text-center">
-          <CheckCircle size={72} weight="duotone" className="text-yellow-400 mx-auto" />
+          <CheckCircle size={72} weight="duotone" className="text-amber-600 mx-auto" />
           <div className="overline mt-8">Request Received</div>
-          <h1 className="brand-wordmark text-5xl sm:text-6xl mt-4 text-white">
+          <h1 className="brand-wordmark text-5xl sm:text-6xl mt-4 text-zinc-900">
             Thanks, {form.name.split(" ")[0] || "friend"}.
           </h1>
-          <p className="mt-6 text-zinc-300 text-lg">
+          <p className="mt-6 text-zinc-700 text-lg">
             We've got your details. Expect a call or email at{" "}
-            <span className="text-yellow-400">{form.email}</span> within 24 hours
+            <span className="text-amber-600">{form.email}</span> within 24 hours
             with a transparent line-item quote.
           </p>
           <div className="mt-10 flex flex-wrap gap-4 justify-center">
@@ -89,15 +89,15 @@ export default function Quote() {
   }
 
   return (
-    <div className="bg-black min-h-screen pt-32 pb-24 px-6 md:px-10" data-testid="quote-page">
+    <div className="bg-stone-100 min-h-screen pt-32 pb-24 px-6 md:px-10" data-testid="quote-page">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12">
         {/* Side info */}
         <div className="lg:col-span-5">
           <div className="overline">Free Quote</div>
-          <h1 className="brand-wordmark text-5xl sm:text-6xl md:text-7xl mt-4 text-white leading-[0.9]">
-            Tell us about <span className="text-yellow-400">your drive.</span>
+          <h1 className="brand-wordmark text-5xl sm:text-6xl md:text-7xl mt-4 text-zinc-900 leading-[0.9]">
+            Tell us about <span className="text-amber-600">your drive.</span>
           </h1>
-          <p className="mt-6 text-zinc-400 text-lg leading-relaxed">
+          <p className="mt-6 text-zinc-600 text-lg leading-relaxed">
             Fill in the form. We'll review, may swing by for a quick on-site look if
             needed, and get back to you within 24 hours with a transparent quote.
           </p>
@@ -109,10 +109,10 @@ export default function Quote() {
               ["Fast turnaround", "Most quotes returned within 24 hours, on-site visits within 48."],
             ].map(([title, body]) => (
               <div key={title} className="flex items-start gap-4">
-                <CheckCircle size={24} weight="duotone" className="text-yellow-400 shrink-0 mt-1" />
+                <CheckCircle size={24} weight="duotone" className="text-amber-600 shrink-0 mt-1" />
                 <div>
-                  <div className="text-white font-semibold">{title}</div>
-                  <div className="text-sm text-zinc-400 mt-1">{body}</div>
+                  <div className="text-zinc-900 font-semibold">{title}</div>
+                  <div className="text-sm text-zinc-600 mt-1">{body}</div>
                 </div>
               </div>
             ))}
@@ -123,7 +123,7 @@ export default function Quote() {
         <div className="lg:col-span-7">
           <form
             onSubmit={onSubmit}
-            className="bg-zinc-950 border border-white/10 p-8 sm:p-10 space-y-6"
+            className="bg-stone-100 border border-zinc-200 p-8 sm:p-10 space-y-6"
             data-testid="quote-form"
           >
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -157,7 +157,7 @@ export default function Quote() {
                       className={`flex items-center gap-3 px-4 py-3 border cursor-pointer transition-colors ${
                         form.service_type === opt.value
                           ? "border-yellow-400 bg-yellow-400/5"
-                          : "border-zinc-800 hover:border-zinc-600"
+                          : "border-zinc-300 hover:border-zinc-400"
                       }`}
                       data-testid={`quote-service-${opt.value}`}
                     >
@@ -169,7 +169,7 @@ export default function Quote() {
                         onChange={update("service_type")}
                         className="accent-yellow-400"
                       />
-                      <span className="text-sm text-white">{opt.label}</span>
+                      <span className="text-sm text-zinc-900">{opt.label}</span>
                     </label>
                   ))}
                 </div>
@@ -183,7 +183,7 @@ export default function Quote() {
                       className={`flex items-center gap-3 px-4 py-3 border cursor-pointer transition-colors ${
                         form.property_type === opt.value
                           ? "border-yellow-400 bg-yellow-400/5"
-                          : "border-zinc-800 hover:border-zinc-600"
+                          : "border-zinc-300 hover:border-zinc-400"
                       }`}
                       data-testid={`quote-property-${opt.value}`}
                     >
@@ -195,7 +195,7 @@ export default function Quote() {
                         onChange={update("property_type")}
                         className="accent-yellow-400"
                       />
-                      <span className="text-sm text-white">{opt.label}</span>
+                      <span className="text-sm text-zinc-900">{opt.label}</span>
                     </label>
                   ))}
                 </div>

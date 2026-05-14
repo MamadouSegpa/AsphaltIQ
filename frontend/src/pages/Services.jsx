@@ -15,16 +15,16 @@ function ServiceBlock({ index, title, image, reverse, blurb, includes, ideal }) 
     >
       <div className={`lg:col-span-6 ${reverse ? "lg:order-2" : ""}`}>
         <div className="overline">{index} — Service</div>
-        <h2 className="brand-wordmark text-5xl sm:text-6xl md:text-7xl mt-4 text-white leading-[0.9]">
+        <h2 className="brand-wordmark text-5xl sm:text-6xl md:text-7xl mt-4 text-zinc-900 leading-[0.9]">
           {title}
         </h2>
-        <p className="mt-6 text-zinc-300 text-lg leading-relaxed max-w-xl">{blurb}</p>
+        <p className="mt-6 text-zinc-700 text-lg leading-relaxed max-w-xl">{blurb}</p>
 
         <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3">
           {includes.map((item) => (
             <div key={item} className="flex items-start gap-3">
-              <Check size={20} weight="bold" className="text-yellow-400 mt-0.5 shrink-0" />
-              <span className="text-sm text-zinc-300">{item}</span>
+              <Check size={20} weight="bold" className="text-amber-600 mt-0.5 shrink-0" />
+              <span className="text-sm text-zinc-700">{item}</span>
             </div>
           ))}
         </div>
@@ -42,7 +42,7 @@ function ServiceBlock({ index, title, image, reverse, blurb, includes, ideal }) 
       </div>
 
       <div className={`lg:col-span-6 ${reverse ? "lg:order-1" : ""}`}>
-        <div className="aspect-[4/5] overflow-hidden border border-white/10">
+        <div className="aspect-[4/5] overflow-hidden border border-zinc-200">
           <img src={image} alt={title} className="w-full h-full object-cover" />
         </div>
       </div>
@@ -52,15 +52,15 @@ function ServiceBlock({ index, title, image, reverse, blurb, includes, ideal }) 
 
 export default function Services() {
   return (
-    <div className="bg-black" data-testid="services-page">
+    <div className="bg-stone-100" data-testid="services-page">
       {/* HEADER */}
-      <section className="pt-32 pb-16 px-6 md:px-10 border-b border-white/5">
+      <section className="pt-32 pb-16 px-6 md:px-10 border-b border-zinc-200">
         <div className="max-w-7xl mx-auto">
           <div className="overline">Our Services</div>
-          <h1 className="heading-display font-bold text-5xl sm:text-6xl md:text-7xl mt-4 text-white max-w-4xl leading-[0.95]">
-            Two services. <span className="text-yellow-400">Zero shortcuts.</span>
+          <h1 className="heading-display font-bold text-5xl sm:text-6xl md:text-7xl mt-4 text-zinc-900 max-w-4xl leading-[0.95]">
+            Two services. <span className="text-amber-600">Zero shortcuts.</span>
           </h1>
-          <p className="mt-6 text-zinc-400 text-lg max-w-2xl">
+          <p className="mt-6 text-zinc-600 text-lg max-w-2xl">
             We focus on what we do best — protecting and extending the life of asphalt
             driveways and parking lots with materials and methods that actually last.
           </p>
@@ -108,24 +108,24 @@ export default function Services() {
       </section>
 
       {/* PROCESS */}
-      <section className="bg-zinc-950 border-t border-white/5 py-24 sm:py-32 px-6 md:px-10" data-testid="process-section">
+      <section className="bg-stone-100 border-t border-zinc-200 py-24 sm:py-32 px-6 md:px-10" data-testid="process-section">
         <div className="max-w-7xl mx-auto">
           <div className="overline">How It Works</div>
-          <h2 className="heading-display text-4xl sm:text-5xl md:text-6xl mt-4 font-bold text-white max-w-2xl">
-            Four steps. <span className="text-yellow-400">No surprises.</span>
+          <h2 className="heading-display text-4xl sm:text-5xl md:text-6xl mt-4 font-bold text-zinc-900 max-w-2xl">
+            Four steps. <span className="text-amber-600">No surprises.</span>
           </h2>
 
-          <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-white/5">
+          <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-zinc-200">
             {[
               ["Quote", "Submit your details, we visit, you get an honest line-item price within 24 hours."],
               ["Schedule", "Pick a window. We work around dry-weather forecasts and your availability."],
               ["Prep", "Power-wash, edge, oil-prime, fill cracks. The prep is the work."],
               ["Apply", "Two coats applied by hand and machine. Drying time clearly marked."],
             ].map(([title, body], i) => (
-              <div key={title} className="bg-black p-8 hover:bg-zinc-900 transition-colors" data-testid={`process-step-${i + 1}`}>
-                <div className="brand-wordmark text-6xl text-yellow-400 leading-none">0{i + 1}</div>
-                <h3 className="mt-6 text-xl font-bold text-white">{title}</h3>
-                <p className="mt-3 text-sm text-zinc-400 leading-relaxed">{body}</p>
+              <div key={title} className="bg-white p-8 hover:bg-stone-50 transition-colors" data-testid={`process-step-${i + 1}`}>
+                <div className="brand-wordmark text-6xl text-amber-600 leading-none">0{i + 1}</div>
+                <h3 className="mt-6 text-xl font-bold text-zinc-900">{title}</h3>
+                <p className="mt-3 text-sm text-zinc-600 leading-relaxed">{body}</p>
               </div>
             ))}
           </div>
@@ -140,7 +140,7 @@ export default function Services() {
           </h2>
           <Link
             to="/quote"
-            className="inline-flex items-center gap-3 bg-black text-yellow-400 font-bold uppercase tracking-[0.18em] text-sm px-10 py-5 hover:bg-zinc-900 transition-colors"
+            className="inline-flex items-center gap-3 bg-zinc-900 text-yellow-400 font-bold uppercase tracking-[0.18em] text-sm px-10 py-5 hover:bg-black transition-colors"
             data-testid="services-bottom-cta"
           >
             Get Free Quote <ArrowRight size={18} weight="bold" />
