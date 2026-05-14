@@ -7,7 +7,7 @@ import { useLang } from "../lib/i18n";
 
 export default function Quote() {
   const navigate = useNavigate();
-  const { t } = useLang();
+  const { t, lang } = useLang();
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [form, setForm] = useState({
@@ -32,7 +32,7 @@ export default function Quote() {
     e.preventDefault();
     setSubmitting(true);
     try {
-      await api.post("/quotes", form);
+      await api.post("/quotes", { ...form, lang });
       setSubmitted(true);
       toast.success(t("Quote request received. We'll be in touch within 24 hours.", "Demande reçue. Nous vous contacterons dans les 24 heures."));
     } catch (err) {

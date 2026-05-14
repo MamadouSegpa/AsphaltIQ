@@ -16,7 +16,12 @@ from starlette.middleware.cors import CORSMiddleware
 from motor.motor_asyncio import AsyncIOMotorClient
 from pydantic import BaseModel, Field, EmailStr, ConfigDict
 
-from emailer import send_quote_notification, send_contact_notification
+from emailer import (
+    send_quote_notification,
+    send_contact_notification,
+    send_quote_autoreply,
+    send_contact_autoreply,
+)
 
 
 # ---------- DB ----------
@@ -103,6 +108,7 @@ class QuoteCreate(BaseModel):
     property_type: str = Field(..., min_length=1)  # residential | commercial
     square_footage: Optional[str] = None
     notes: Optional[str] = Field(None, max_length=2000)
+    lang: Optional[str] = "en"
 
 
 class QuoteOut(BaseModel):
@@ -129,6 +135,7 @@ class ContactCreate(BaseModel):
     email: EmailStr
     phone: Optional[str] = None
     message: str = Field(..., min_length=1, max_length=2000)
+    lang: Optional[str] = "en"
 
 
 class ContactOut(BaseModel):
@@ -185,6 +192,7 @@ async def create_quote(payload: QuoteCreate, background_tasks: BackgroundTasks):
     await db.quotes.insert_one(doc)
     doc.pop("_id", None)
     background_tasks.add_task(send_quote_notification, doc)
+    background_tasks.add_task(send_quote_autoreply, doc)
     return QuoteOut(**doc)
 
 
@@ -221,6 +229,7 @@ async def create_contact(payload: ContactCreate, background_tasks: BackgroundTas
     await db.contacts.insert_one(doc)
     doc.pop("_id", None)
     background_tasks.add_task(send_contact_notification, doc)
+    background_tasks.add_task(send_contact_autoreply, doc)
     return ContactOut(**doc)
 
 

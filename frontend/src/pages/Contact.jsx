@@ -5,7 +5,7 @@ import api, { formatApiErrorDetail } from "../lib/api";
 import { useLang } from "../lib/i18n";
 
 export default function Contact() {
-  const { t } = useLang();
+  const { t, lang } = useLang();
   const [submitting, setSubmitting] = useState(false);
   const [form, setForm] = useState({ name: "", email: "", phone: "", message: "" });
 
@@ -15,7 +15,7 @@ export default function Contact() {
     e.preventDefault();
     setSubmitting(true);
     try {
-      await api.post("/contact", form);
+      await api.post("/contact", { ...form, lang });
       toast.success(t("Message sent. We'll get back to you shortly.", "Message envoyé. Nous vous répondrons sous peu."));
       setForm({ name: "", email: "", phone: "", message: "" });
     } catch (err) {
