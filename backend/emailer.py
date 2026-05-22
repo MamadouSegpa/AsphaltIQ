@@ -35,6 +35,9 @@ async def _send(subject: str, html: str, to: str | None = None):
         logger.info("recipient not set; skipping email")
         return
     params = {"from": sender, "to": [recipient], "subject": subject, "html": html}
+    reply_to = os.environ.get("REPLY_TO_EMAIL")
+    if reply_to:
+        params["reply_to"] = reply_to
     try:
         result = await asyncio.to_thread(resend.Emails.send, params)
         logger.info(f"Email sent to {recipient}: {result.get('id') if isinstance(result, dict) else result}")
