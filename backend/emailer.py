@@ -75,7 +75,7 @@ async def send_quote_notification(quote: dict):
       <div style="max-width:560px;margin:0 auto;background:#ffffff;">
         <div style="background:#facc15;padding:20px 24px;">
           <div style="font-size:12px;letter-spacing:3px;text-transform:uppercase;color:#000;font-weight:700;">New Quote Request</div>
-          <div style="font-size:22px;font-weight:800;color:#000;margin-top:4px;">Asphaltiq</div>
+          <div style="font-size:22px;font-weight:800;color:#000;margin-top:4px;">AsphaltIQ</div>
         </div>
         <table style="width:100%;border-collapse:collapse;">{rows}</table>
         <div style="padding:20px 24px;font-size:12px;color:#666;background:#f7f7f7;">
@@ -100,7 +100,7 @@ async def send_contact_notification(contact: dict):
       <div style="max-width:560px;margin:0 auto;background:#ffffff;">
         <div style="background:#facc15;padding:20px 24px;">
           <div style="font-size:12px;letter-spacing:3px;text-transform:uppercase;color:#000;font-weight:700;">New Contact Message</div>
-          <div style="font-size:22px;font-weight:800;color:#000;margin-top:4px;">Asphaltiq</div>
+          <div style="font-size:22px;font-weight:800;color:#000;margin-top:4px;">AsphaltIQ</div>
         </div>
         <table style="width:100%;border-collapse:collapse;">{rows}</table>
       </div>
@@ -117,8 +117,8 @@ _EMAIL = "info@asphaltiq.ca"
 
 _TXT = {
     "en": {
-        "quote_subject": "Thanks — we received your quote request | Asphaltiq",
-        "contact_subject": "Thanks — we received your message | Asphaltiq",
+        "quote_subject": "Thanks — we received your quote request | AsphaltIQ",
+        "contact_subject": "Thanks — we received your message | AsphaltIQ",
         "preheader_quote": "We'll be in touch within 24 hours with your free quote.",
         "preheader_contact": "We've received your message and will reply shortly.",
         "hi": "Hi",
@@ -139,7 +139,7 @@ _TXT = {
         "call_us": "Call us at",
         "email_us": "Email us at",
         "thanks_closing": "Thanks again,",
-        "team": "The Asphaltiq Team",
+        "team": "The AsphaltIQ Team",
         "footer_tagline": "Smarter asphalt care · Montreal West Island",
         "auto_note": "This is an automated confirmation. Please do not reply directly to this email.",
         "service_sealcoating": "Driveway Sealcoating",
@@ -149,8 +149,8 @@ _TXT = {
         "prop_commercial": "Commercial",
     },
     "fr": {
-        "quote_subject": "Merci — nous avons reçu votre demande de soumission | Asphaltiq",
-        "contact_subject": "Merci — nous avons reçu votre message | Asphaltiq",
+        "quote_subject": "Merci — nous avons reçu votre demande de soumission | AsphaltIQ",
+        "contact_subject": "Merci — nous avons reçu votre message | AsphaltIQ",
         "preheader_quote": "Nous vous contacterons dans les 24 heures avec votre soumission gratuite.",
         "preheader_contact": "Nous avons reçu votre message et vous répondrons sous peu.",
         "hi": "Bonjour",
@@ -171,7 +171,7 @@ _TXT = {
         "call_us": "Appelez-nous au",
         "email_us": "Écrivez-nous à",
         "thanks_closing": "Merci encore,",
-        "team": "L'équipe Asphaltiq",
+        "team": "L'équipe AsphaltIQ",
         "footer_tagline": "Entretien intelligent de l'asphalte · Ouest-de-l'Île de Montréal",
         "auto_note": "Ceci est une confirmation automatique. Merci de ne pas répondre directement à ce courriel.",
         "service_sealcoating": "Scellement d'allée",
@@ -192,7 +192,7 @@ def _email_shell(preheader: str, body_html: str, lang: str) -> str:
     t = _txt(lang)
     logo = _logo_url()
     logo_html = (
-        f'<img src="{logo}" alt="Asphaltiq" width="220" style="display:block;width:220px;max-width:60%;height:auto;border:0;outline:none;text-decoration:none;" />'
+        f'<img src="{logo}" alt="AsphaltIQ" width="220" style="display:block;width:220px;max-width:60%;height:auto;border:0;outline:none;text-decoration:none;" />'
         if logo
         else '<div style="font-family:Arial,sans-serif;font-size:28px;font-weight:800;color:#18181b;letter-spacing:0.5px;">asphalt<span style="color:#d97706;">IQ</span></div>'
     )
@@ -201,7 +201,7 @@ def _email_shell(preheader: str, body_html: str, lang: str) -> str:
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Asphaltiq</title>
+<title>AsphaltIQ</title>
 </head>
 <body style="margin:0;padding:0;background-color:#f5f5f4;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#18181b;">
   <!-- preheader (hidden) -->
